@@ -36,12 +36,12 @@ export default class Command extends BaseCommand {
                 }
             }
             let text = `
-╭─「(づ￣ 3￣)づ」
-│⋊ ᴜꜱᴇʀ: *${M.sender.username}*
-│⋊ ɴᴀᴍᴇ: 🌺Yuri boyka 🌺
-│⋊ ᴘʀᴇꜰɪx: ${this.client.config.prefix}
-│⋊ ᴏᴡɴᴇʀ: <${this.client.config.prefix}mod>
-╰────────────┈平和                            \n\n`
+╭─「Hi there Friend it's me Yuri Boyka」
+💙 ᴜꜱᴇʀ: *${M.sender.username}*
+💙 ɴᴀᴍᴇ: 🌺Yuri boyka 🌺
+💜 ᴘʀᴇꜰɪx: ${this.client.config.prefix}
+💜 ᴏᴡɴᴇʀ: <${this.client.config.prefix}mod>
+╰────────────┈❥                            \n\n`
             const keys = Object.keys(categories)
             for (const key of keys)
                 text += `${this.emojis[keys.indexOf(key)]} *${this.client.util.capitalize(key)}* ${this.emojis[keys.indexOf(key)]}\n\n• \`\`\`${categories[
@@ -52,13 +52,13 @@ export default class Command extends BaseCommand {
             return void this.client.sendMessage(M.from, { url: rin }, MessageType.video, {quoted:M.WAMessage,
             mimetype: Mimetype.gif,
             caption: `${text} 
- ──❅┈[ Offset hacker Bot ]┈❅───
-┌────────────┈❅
-│   🧨 Boyka
-│   ©️ Synthesized Infinity Botto
-└────────────┈⁂
-❅┈[𝐇𝐚𝐯𝐞 𝐆𝐫𝐞𝐚𝐭 𝐃𝐚𝐲]┈❅
-🎗 *Note: Use ${this.client.config.prefix}help <command_name> to view the command info*` }
+ ──✷┈[ *Offset hacker Bot* ]┈✯───
+┌────────────┈*ω*
+│   🌺 Boyka
+│   🕊️ Synthesized Infinity Botto
+└────────────┈*ω*
+😌┈[𝐇𝐚𝐯𝐞 𝐆𝐫𝐞𝐚𝐭 𝐃𝐚𝐲]┈😌
+🎀 *Note: Use ${this.client.config.prefix}help <command_name> to view the command info*` }
             )
         }
         const key = parsedArgs.joined.toLowerCase()
@@ -68,7 +68,7 @@ export default class Command extends BaseCommand {
         M.reply(
             `🎈 *Command:* ${this.client.util.capitalize(command.config?.command)}\n📉 *Status:* ${
                 state ? 'Disabled' : 'Available'
-            }\n⛩ *Category:* ${this.client.util.capitalize(command.config?.category || '')}${
+            }\n(✿ *Category:* ${this.client.util.capitalize(command.config?.category || '')}${
                 command.config.aliases
                     ? `\n♦️ *Aliases:* ${command.config.aliases.map(this.client.util.capitalize).join(', ')}`
                     : ''
